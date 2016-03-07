@@ -1,0 +1,61 @@
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+  h3:hover  {
+    color: #39dfe4;
+  }
+
+  .taskCol {
+    width: 30%;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+  }
+
+  .task {
+    width: 90%;
+    margin: 5px;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+  }
+
+  .task p {
+    margin: 10px;
+  }
+    h4:hover {
+          color: #39dfe4;
+    }
+
+    .taskDesc {
+      margin-top: 10px;
+      text-align: right;
+    }
+
+    .buttonContainer {
+      display: flex;
+      justify-content: space-around;
+      width: 100%;
+    }
+
+    #dummy {
+      visibility: hidden;
+    }
+
+
+.newTask {
+  padding: 5px;
+  margin-left: 20%;
+  margin-top: 50px;
+  position: absolute;
+  background-color: white;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+}
+
+  .newTextArea {
+    margin: 5px 0;
+  }

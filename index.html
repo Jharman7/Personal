@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html ng-app="homeApp">
+  <head>
+    <link rel="stylesheet" href="/css/styles.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="/css/todoStyles.css" media="screen" title="no title" charset="utf-8">
+    <meta charset="utf-8">
+    <title>WebApp</title>
+  </head>
+  <body>
+    <header>
+      <div class="header">
+        <!-- <h1 id="homeTitle" ui-sref="home">Jeff's Site</h1> -->
+        <div class="nav">
+          <a ui-sref="cal">Calendar</a>
+          <a ui-sref="todo">To-Do List</a>
+        </div>
+      </div>
+    </header>
+    <div ui-view ng-controller='todoCtrl'></div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.js" charset="utf-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.18/angular-ui-router.js" charset="utf-8"></script>
+    <script src="components/app.js" charset="utf-8"></script>
+    <script src="components/services/dataService.js" charset="utf-8"></script>
+    <script src="components/todo/todoCtrl.js" charset="utf-8"></script>
+  </body>
+</html>

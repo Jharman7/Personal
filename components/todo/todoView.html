@@ -1,0 +1,45 @@
+<div class="newTask" ng-show="newTaskShow">
+  <h5>New Task</h5>
+  <input placeholder="Name..." ng-model="newTaskName">
+  <textarea class="newTextArea" placeholder="Description..." rows="4" cols="20" ng-model="newTaskDesc"></textarea>
+  <div class="newButtonContainer">
+    <input type="button" value="Submit" ng-click="newTaskSub(newTaskName,newTaskDesc)">
+    <input type="button" value="Cancel" ng-click="newTaskShow = !newTaskShow">
+  </div>
+</div>
+
+<div class="container">
+  <div class="taskCol">
+    <h3 ng-click="newTaskShow = !newTaskShow">New Tasks</h3>
+    <div class="task" ng-repeat="task in newTasks">
+      <h4 class ="taskName" ng-click="task.show = !task.show">{{task.name}}</h4>
+      <p class="taskDesc"  ng-show="task.show">{{task.desc}}</p>
+      <div class="buttonContainer" ng-show="task.show">
+        <input type="button" value="Advance" ng-click="advTask(task.name)">
+        <input type="button" value="Delete" ng-click="delTask(task.name)">
+      </div>
+    </div>
+  </div>
+  <div class="taskCol">
+    <h3>In Progress</h3>
+    <div class="task" ng-repeat="task in inProgress">
+      <h4 ng-click="task.show = !task.show">{{task.name}}</h4>
+      <p class="taskDesc" ng-show="task.show">{{task.desc}}</p>
+      <div class="buttonContainer" ng-show="task.show">
+        <input type="button" value="Advance" ng-click="advTask(task.name)">
+        <input type="button" value="Delete" ng-click="delTask(task.name)">
+      </div>
+    </div>
+  </div>
+  <div class="taskCol">
+    <h3>Completed</h3>
+    <div class="task" ng-repeat="task in completed">
+      <h4 ng-click="task.show = !task.show">{{task.name}}</h4>
+      <p class="taskDesc" ng-show="task.show">{{task.desc}}</p>
+      <div class="buttonContainer" ng-show="task.show">
+        <input id="dummy" type="button" value="Advance" ng-click="advTask(task.name)">
+        <input type="button" value="Delete" ng-click="delTask(task.name)">
+      </div>
+    </div>
+  </div>
+</div>
